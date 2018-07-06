@@ -1,0 +1,188 @@
+.panel-two{
+  position: relative;
+  overflow: hidden;
+  background-color: #343C4B;
+  color: #E1EBFF;
+  padding-left: 0;
+
+
+  .inner{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom: 0;
+
+    .header{
+      border-bottom: $border-bottom-dark;
+      .heading{
+        display: flex;
+        align-items: center;
+        width:100%;
+    
+        h5.b-name{
+          font-size: 24px;
+          margin: 0;
+          padding: 0;
+        }
+        .back-icon{
+          margin-right: 15px;
+        }
+        .b-avater-icon{
+          width: 40px;
+          height:40px;
+          border-radius: 50%;
+          background-color: blue;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 10px;
+        }
+        .b-name{
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+    
+    .listings{
+      position: relative;
+      height: 100%;
+      .content{
+        box-sizing: border-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        position: absolute;
+        transition: background .3s ease-out .1s;
+        width: 100%;
+        z-index: 100;
+        &.with-padding{
+          padding: 10px;
+        }
+      }
+    }
+   
+    
+
+    .footer{
+      background-color: #262E3E;
+      position: relative;
+      padding: 0 10px;
+      .menu-items{
+        position: absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+      }
+    }
+    .tabs{
+      display: flex;
+      height:80px;
+      align-items: center;
+      overflow: hidden;
+      flex-wrap: nowrap;
+      cursor: pointer;
+      &:hover{
+        overflow-x: scroll;
+      }
+      .tab{
+        min-width: 120px;
+        height: 100%;
+        border-right: 1px solid #5c5b5b;
+        border-bottom: 1px solid #5c5b5b;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &.selected{
+          border-bottom: 2px solid blue;
+          background-color: #3A465B;
+        }
+      }
+    }
+
+    .new-messages{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      .new-message{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 80px;
+        padding: 15px  10px;
+        cursor: pointer;
+        .actions{
+          display: flex;
+          flex-direction: column;
+          i{
+            font-size: 10px;
+            font-style: normal;
+          }
+        }      
+        &:hover{
+          background-color: #363f51;
+        }
+        &.selected{
+          background-color: #262E3E;
+        }
+        .info{
+          display: flex;
+          flex-direction: column;
+          flex:2;
+          i{
+            white-space: nowrap; 
+            width: 150px; 
+            overflow: hidden;
+            text-overflow: ellipsis; 
+            font-size: 10px;
+            font-style: normal;
+          }
+          .title{
+            font-size: 15px;
+          }
+        }
+        .avater{
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          background-color: #5c5b5b;
+          margin-right: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          .status{
+            position: absolute;
+            width:15px;
+            height:15px;
+            border-radius: 50%;
+            background-color: #5CD068;
+            top:0;
+            left:5px;
+            border: 2px solid #343C4B;
+            z-index: 999;
+            &.online{
+              background-color: #5CD068;
+            }
+            &.offline{
+              background-color: grey;
+            }
+          }
+        }
+      }    
+    }
+  }
+}
